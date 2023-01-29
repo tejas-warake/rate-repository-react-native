@@ -1,6 +1,5 @@
 import { FlatList, View, StyleSheet, SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Text from './Text';
 import DisplayItem from './DisplayItem';
 
 const styles = StyleSheet.create({
@@ -59,6 +58,7 @@ const repositories = [
         ownerAvatarUrl: 'https://avatars3.githubusercontent.com/u/13142323?v=4',
     },
 ];
+
 
 const ItemSeparator = () => <View style={styles.separator} />;
 

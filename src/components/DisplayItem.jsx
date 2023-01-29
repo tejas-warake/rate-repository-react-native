@@ -2,19 +2,26 @@ import React from 'react'
 import { View, StyleSheet } from 'react-native';
 import Text from './Text';
 import DisplayImage from './DisplayImage';
+import theme from '../theme';
+
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginHorizontal: 20,
-        marginVertical: 13
+        marginHorizontal: 15,
+        marginVertical: 1,
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        backgroundColor: theme.colors.white,
+        borderRadius: 10
     },
     firstSection: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
+        flex: 0,
+        flexDirection: 'row'
     },
     firstSectionSub: {
+        flex: 2,
+        flexDirection: 'column',
         marginLeft: 20
     },
     userName: {
@@ -103,4 +110,5 @@ const DisplayItem = ({ item }) => {
     )
 }
 
-export default DisplayItem
+export default DisplayItem;
+
