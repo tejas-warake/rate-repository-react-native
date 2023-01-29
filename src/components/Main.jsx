@@ -1,10 +1,9 @@
-import Constants from 'expo-constants';
+import { SafeAreaView } from 'react-native';
 import RepositoryList from './RepositoryList.jsx';
-import { Text, StyleSheet, View } from 'react-native';
 
 const Main = () => {
   return (
-    <RepositoryList />
+      <RepositoryList />
   );
 };
 
