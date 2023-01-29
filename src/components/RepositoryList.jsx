@@ -1,11 +1,12 @@
 import { FlatList, View, StyleSheet, SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Text from './Text';
+import DisplayItem from './DisplayItem';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        marginTop: StatusBar.currentHeight || 40,
+        display: 'flex',
+        flexDirection: 'column'
     },
     separator: {
         height: 10,
@@ -61,24 +62,11 @@ const repositories = [
 
 const ItemSeparator = () => <View style={styles.separator} />;
 
-const Item = ({ item, titleSize }) => {
-    return (
-        <View>
-            <Text style={{fontSize:titleSize}}>Full Name: {item.fullName}</Text>
-            <Text>Description: {item.description}</Text>
-            <Text>Language: {item.language}</Text>
-            <Text>Forks: {item.forkaCount}</Text>
-            <Text>Reviews: {item.reviewCount}</Text>
-            <Text>Ratings: {item.ratingAverage}</Text>
-        </View>
-    )
-}
-
 const RepositoryList = () => {
     const renderItem = ({ item }) => {
         const title_size = 25;
         return (
-            <Item
+            <DisplayItem
                 item={item}
                 titleSize={title_size}
             />
